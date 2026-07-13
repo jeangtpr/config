@@ -18,8 +18,8 @@ source <(curl -fsSL https://raw.githubusercontent.com/jeangtpr/config/main/ponyt
 ```
 
 ### 2. Symlink Global Gemini Rules
-Link the rules from this repository to your global Gemini configurations directory so that updates are tracked automatically:
+Link the rules from this repository to your global Gemini configurations directory so that updates are tracked automatically. Run this command from the root of the cloned `config` repository:
 ```bash
 mkdir -p ~/.gemini
-ln -sf ~/repos/config/GEMINI.md ~/.gemini/GEMINI.md
+ln -sf "$(pwd)/GEMINI.md" ~/.gemini/GEMINI.md
 ```
