@@ -4,22 +4,15 @@ This repository manages personal configurations, global rules, and installation 
 
 ## Overview
 
-- **`ponytail-agy.sh`**: Setup script that installs the `antigravity` CLI and the `ponytail` plugin for lean/senior development patterns.
+- **`ponytail-agy.sh`**: Setup script that installs the `antigravity` CLI, the `ponytail` plugin, and automatically clones this repo and symlinks `GEMINI.md` to configure the global agent rules.
 - **`GEMINI.md`**: Global system rules for Gemini/Antigravity enforcing Ponytail Ultra Mode and TDD (Test-Driven Development) workflows.
 
 ---
 
 ## Usage & Setup
 
-### 1. Initialize Development Environment
-Run the bootstrap script to install CLI tools and configure the agent plugins:
+### Bootstrap Environment
+Run the bootstrap script to install the CLI tools, configure plugins, clone the config repository, and set up the global rule symlink:
 ```bash
 source <(curl -fsSL https://raw.githubusercontent.com/jeangtpr/config/main/ponytail-agy.sh)
-```
-
-### 2. Symlink Global Gemini Rules
-Link the rules from this repository to your global Gemini configurations directory so that updates are tracked automatically. Run this command from the root of the cloned `config` repository:
-```bash
-mkdir -p ~/.gemini
-ln -sf "$(pwd)/GEMINI.md" ~/.gemini/GEMINI.md
 ```
