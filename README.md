@@ -16,3 +16,13 @@ Run the bootstrap script to install the CLI tools, configure plugins, clone the 
 ```bash
 source <(curl -fsSL https://raw.githubusercontent.com/jeangtpr/config/main/ponytail-agy.sh)
 ```
+
+### Manual Symlink Setup
+If you prefer to set up the config directory and symlink manually, run:
+```bash
+if [ ! -d "$HOME/repos/config" ]; then
+  git clone https://github.com/jeangtpr/config.git "$HOME/repos/config"
+fi
+mkdir -p ~/.gemini
+ln -sf "$HOME/repos/config/GEMINI.md" ~/.gemini/GEMINI.md
+```
